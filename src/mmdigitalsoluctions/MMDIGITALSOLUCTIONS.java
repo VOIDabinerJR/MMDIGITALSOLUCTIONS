@@ -12,7 +12,7 @@ public class MMDIGITALSOLUCTIONS {
        
      
        // Eletronico inspiror = new Computador("PC Gamer", "Dell", 2000.0, true, true);
-        Computador thinkpad = new Computador("PC Gamer", "Lenovo", 2000.0, true, true);
+       // Eletronico thinkpad = new Computador("PC Gamer", "Lenovo", 2000.0, true, true);
         Smartphone galaxy = new Smartphone("Smartphone Pro", "Samsung", 1500.0, 8192, 128);
         Smartphone redmi = new Smartphone("Smartphone Pro", "Xiaomi", 1500.0, 8192, 128);
 
@@ -21,7 +21,7 @@ public class MMDIGITALSOLUCTIONS {
 
         
         //electronicos.add(inspiror);
-        electronicos.add(thinkpad);
+       // electronicos.add(thinkpad);
         electronicos.add(galaxy);
         electronicos.add(redmi);
         
@@ -47,15 +47,7 @@ public class MMDIGITALSOLUCTIONS {
             pstmt.setDouble(3, electronico.getPreco());
 
            
-            if (electronico instanceof Computador) {
-                Computador comp = (Computador) electronico;
-                pstmt.setString(4, "Computador");
-                pstmt.setString(5, "Gamer: " + comp.isGamer() + ", Status: " + comp.isStatus());
-            } else if (electronico instanceof Smartphone) {
-                Smartphone phone = (Smartphone) electronico;
-                pstmt.setString(4, "Smartphone");
-                pstmt.setString(5, "Memoria RAM: " + phone.getMemoriaRAM() + "MB, Armazenamento: " + phone.getArmazenamento() + "GB");
-            }
+           
 
       
             pstmt.executeUpdate();

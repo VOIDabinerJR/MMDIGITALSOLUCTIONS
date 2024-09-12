@@ -1,0 +1,11 @@
+
+
+1a. Herança - "herdar", consiste na criação de novas classe, a partir de uma superclasse, onde 'herdam-se' atributos e comportamentos da superclasse epla subclasse com vista a reutilizar codigo
+
+1b. Polimorfismo - "Varias" "Formas", consiste em permitir que um objecto apresente varias formas e diferentes. por exemplo, tratar uma subclasse como objecto da superclass com vista a facilitar a implementação de métodos que podem operar sobre diferentes tipos de objetos.
+
+
+2a.V
+2b.V
+2c.V
+2d.V

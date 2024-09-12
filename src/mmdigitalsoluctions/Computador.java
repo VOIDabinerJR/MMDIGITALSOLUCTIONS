@@ -49,14 +49,7 @@ public class Computador {
                 String username = userText.getText();
                 String email = emailText.getText();
                 String password = new String(passwordField.getPassword());
-  String sql = "INSERT INTO Electronico (nome, marca, preco, tipo, atributos_especificos) VALUES (?, ?, ?, ?, ?)";
-        try {
-            pst = ConexaoMySQl.obterConexao().prepareStatement(sql);
-            pst.execute();
-            JOptionPane.showMessageDialog(null, "salvo");
-        } catch (SQLException e) {
-            System.out.println(e);
-        }
+  
                
                 JOptionPane.showMessageDialog(frame, "Registrado com sucesso!");
             }

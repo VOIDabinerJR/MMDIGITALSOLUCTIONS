@@ -1,10 +1,6 @@
-
 package mmdigitalsoluctions;
 
 public interface Desconto {
-    
-    public void aplicarDesconto(){
-     
-    }
-    
+    // Método para aplicar desconto, sem implementação
+    void aplicarDesconto();
 }
