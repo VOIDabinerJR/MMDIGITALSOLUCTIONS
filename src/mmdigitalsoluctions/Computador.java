@@ -1,18 +1,20 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class Computador {
 
     public static void main(String[] args) {
        
-        JFrame frame = new JFrame("Formulário de Registro");
+        JFrame frame = new JFrame("Registar Computador");
         frame.setSize(300, 200);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(null);
 
         
-        JLabel userLabel = new JLabel("Nome de Usuário:");
+        JLabel userLabel = new JLabel("Nome:");
         userLabel.setBounds(10, 20, 120, 25);
         frame.add(userLabel);
 
@@ -20,7 +22,7 @@ public class Computador {
         userText.setBounds(140, 20, 150, 25);
         frame.add(userText);
 
-        JLabel emailLabel = new JLabel("E-mail:");
+        JLabel emailLabel = new JLabel("Marca:");
         emailLabel.setBounds(10, 50, 120, 25);
         frame.add(emailLabel);
 
@@ -28,7 +30,7 @@ public class Computador {
         emailText.setBounds(140, 50, 150, 25);
         frame.add(emailText);
 
-        JLabel passwordLabel = new JLabel("Senha:");
+        JLabel passwordLabel = new JLabel("Preco:");
         passwordLabel.setBounds(10, 80, 120, 25);
         frame.add(passwordLabel);
 
@@ -47,7 +49,14 @@ public class Computador {
                 String username = userText.getText();
                 String email = emailText.getText();
                 String password = new String(passwordField.getPassword());
-
+  String sql = "INSERT INTO Electronico (nome, marca, preco, tipo, atributos_especificos) VALUES (?, ?, ?, ?, ?)";
+        try {
+            pst = ConexaoMySQl.obterConexao().prepareStatement(sql);
+            pst.execute();
+            JOptionPane.showMessageDialog(null, "salvo");
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
                
                 JOptionPane.showMessageDialog(frame, "Registrado com sucesso!");
             }

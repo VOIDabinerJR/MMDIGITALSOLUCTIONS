@@ -6,11 +6,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class MMDIGITALSOLUCTIONS {
     public static void main(String[] args) {
        
      
-        Computador inspiror = new Computador("PC Gamer", "Dell", 2000.0, true, true);
+       // Eletronico inspiror = new Computador("PC Gamer", "Dell", 2000.0, true, true);
         Computador thinkpad = new Computador("PC Gamer", "Lenovo", 2000.0, true, true);
         Smartphone galaxy = new Smartphone("Smartphone Pro", "Samsung", 1500.0, 8192, 128);
         Smartphone redmi = new Smartphone("Smartphone Pro", "Xiaomi", 1500.0, 8192, 128);
@@ -19,7 +20,7 @@ public class MMDIGITALSOLUCTIONS {
         List<Electronico> electronicos = new ArrayList<>();
 
         
-        electronicos.add(inspiror);
+        //electronicos.add(inspiror);
         electronicos.add(thinkpad);
         electronicos.add(galaxy);
         electronicos.add(redmi);
@@ -31,7 +32,7 @@ public class MMDIGITALSOLUCTIONS {
             e.calcularPrecoFinal();
         }
 
-        // Imprimindo os dados de todos os objetos
+       
         for (Electronico e : electronicos) {
             e.imprimirDados();
         }
