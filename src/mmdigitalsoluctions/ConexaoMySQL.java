@@ -34,8 +34,6 @@ public class ConexaoMySQL {
         Connection conexao = null;
 
         try {
-
-
             conexao = DriverManager.getConnection(URL, USER, PASSWORD);
             return true;
         } catch (SQLException e) {
